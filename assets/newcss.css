@@ -182,7 +182,7 @@ img {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .nav__logo:hover {
@@ -244,6 +244,11 @@ img {
 .nav__close:hover {
   color: var(--first-color-alt);
 }
+/* Căn giữa theo chiều ngang*/
+.containers {
+  text-align: center; 
+}
+
 
 /* Show Menu */
 .show-menu {
@@ -340,7 +345,42 @@ img {
 .home__scroll-arrow {
   font-size: 1.25rem;
 }
+/*================== chu thut xuong ===================*/
+.text-effect {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Tạo hiệu ứng chuyển động mượt */
+}
 
+.text-effect:hover {
+  transform: translateY(5px); /* Chữ thụt xuống 5px khi hover */
+}
+/*================== chay chu ===================*/
+.typing-erasing-effect {
+  font-size: 24px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing-erasing 7s linear infinite;
+}
+
+@keyframes typing-erasing {
+  0% {
+      clip-path: inset(0 100% 0 0); /* Ẩn toàn bộ chữ */
+  }
+  25% {
+      clip-path: inset(0 0 0 0); /* Hiện toàn bộ chữ */
+  }
+  50% {
+      clip-path: inset(0 0 0 0); /* Giữ toàn bộ chữ */
+  }
+  75% {
+      clip-path: inset(0 100% 0 0); /* Xóa toàn bộ chữ */
+  }
+  100% {
+      clip-path: inset(0 100% 0 0); /* Chuẩn bị cho lần lặp tiếp theo */
+  }
+}
 /*================== Buttons ===================*/
 .button {
   display: inline-block;
@@ -428,6 +468,12 @@ img {
 .about__buttons {
   display: flex;
   justify-content: center;
+}
+.about__buttons2{
+  display: flex;
+  justify-content: center;
+  margin-left: 160px;
+  margin-top: -55px;
 }
 
 /*===================== SKILLS =========================*/
